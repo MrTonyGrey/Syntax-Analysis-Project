@@ -18,9 +18,10 @@ int  lex();
 #define LEFT_PAREN 25 
 #define RIGHT_PAREN 26
 
-main() /* main driver */    /* Open the input data file and process its contents */  
+
+main() /* main driver */    
 {
-  if  ((in_fp = fopen("front.in", "r")) == NULL)     
+  if  ((in_fp = fopen("front.in", "r")) == NULL)      /* Open the input data file and process its contents */ 
     printf("ERROR - cannot open front.in \n"); 
   else 
   {     
@@ -31,3 +32,38 @@ main() /* main driver */    /* Open the input data file and process its contents
      } while  (nextToken != EOF);  
    } 
 }
+ 
+
+int  lookup(char  ch)  /* lookup - a function to lookup operators and parentheses and return the token */
+{  
+  switch (ch) 
+  {
+    case '(':
+      addChar();      
+      nextToken = LEFT_PAREN;      
+      break;
+    case ')':      
+      addChar();      
+      nextToken = RIGHT_PAREN;      
+      break;
+         
+    case '+':      
+      addChar();      
+      nextToken = ADD_OP;      
+      break;
+    case '-':      
+      addChar();      
+      nextToken = SUB_OP;      
+      break;
+    case '*':      
+      addChar();      
+      nextToken = MULT_OP;      
+      break;
+    case  '/':      
+      addChar();      
+      nextToken = DIV_OP;      
+      break;
+ 
+       
+ 
+
