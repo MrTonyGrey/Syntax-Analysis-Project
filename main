@@ -103,5 +103,13 @@ void getChar()
     charClass = EOF;
   }
 }
+
+void getNonBlank() 
+{
+  while (isspace(nextChar)) 
+    getChar();
+}
+
+
  
 
