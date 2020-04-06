@@ -126,7 +126,16 @@ int lex()
     }
      nextToken = IDENT;
      break;       
-      
-
- 
-
+     
+  case DIGIT:
+    addChar();
+    getChar();
+    while (charClass == DIGIT) 
+    {
+      addChar();
+      getChar();
+    }
+    nextToken = INT_LIT;
+    break;
+    
+    
