@@ -137,5 +137,15 @@ int lex()
     }
     nextToken = INT_LIT;
     break;
-    
+  
+  case UNKNOWN:
+    lookup(nextChar);
+		  if (nextToken == '\n') 
+      {
+				getNewLine();
+				printf("Error: Next lexeme not in a valid expression. Moving to next expr. \n\n");
+				return nextToken;
+			}
+    getChar();
+    break;   
     
