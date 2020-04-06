@@ -110,6 +110,11 @@ void getNonBlank()
     getChar();
 }
 
+int lex() 
+{
+  lexLen = 0;
+  getNonBlank();   
+
 
  
 
