@@ -62,6 +62,16 @@ void expect_error(int EXPECTED_CODE)
   exit(0);
 
 }
+
+void factor()
+{
+  printf("Enter <factor>\n");  // Choose between two RHSs
+
+ 
+  if(nextToken == IDENT || nextToken == INT_LIT)  // Picks a RHSs
+  {
+    lex();  // Call lex ()
+  }
  
 
 int  lookup(char  ch)  /* lookup - a function to lookup operators and parentheses and return the token */
