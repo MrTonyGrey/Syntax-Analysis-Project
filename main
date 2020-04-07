@@ -45,6 +45,13 @@ main() /* main driver */
      } while  (nextToken != EOF);  
    } 
 }
+
+/* An error function for accounting for errors */
+void error(const char * msg)
+{
+  printf("Error");
+  exit(0);
+}
  
 
 int  lookup(char  ch)  /* lookup - a function to lookup operators and parentheses and return the token */
