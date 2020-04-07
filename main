@@ -241,6 +241,7 @@ void getChar()
   {
     charClass = EOF;
   }
+  getCharCount++; // increment variable
 }
 
 void getNonBlank() 
