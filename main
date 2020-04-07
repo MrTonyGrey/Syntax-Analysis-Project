@@ -60,7 +60,7 @@ int  lex();
     return -1; 
 }
 
-main(int argc, char *argv[]) // main function 
+int main(int argc, char *argv[]) // main function 
 {
   fileSize = fsize(argv[1]); // Get the size of the file
   if  ((in_fp = fopen(argv[1], "r")) == NULL)      // Open file  
