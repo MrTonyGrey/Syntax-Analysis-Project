@@ -49,6 +49,16 @@ int  lex();
 // Declarations for functions <expr> and <stmt>
  void expr();
  void stmt();
+ 
+ off_t fsize(const char *filename) // File size function
+ {
+    struct stat st; 
+    if (stat(filename, &st) == 0)
+    {
+       return st.st_size;
+    }
+    return -1; 
+}
 
 main() /* main driver */    
 {
