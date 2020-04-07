@@ -70,7 +70,8 @@ main(int argc, char *argv[]) // main function
     getChar();     
     do 
     {       
-      lex();    
+      lex();
+      stmt();
      } while  (getCharCount < fileSize);  
    } 
 }
