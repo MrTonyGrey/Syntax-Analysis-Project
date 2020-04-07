@@ -125,6 +125,17 @@ void expr()
   printf("Exit <expr> \n");
 }
 
+void stmt() 
+{
+  printf("Enter <stmt>\n");
+  if (nextToken == IDENT)
+  {
+    lex(); // Call lex()
+    if (nextToken == ASSIGN_OP)
+    {
+    
+    }
+
 int  lookup(char  ch)  /* lookup - a function to lookup operators and parentheses and return the token */
 {  
   switch (ch) 
