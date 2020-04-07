@@ -278,15 +278,10 @@ int lex()
     break;
   
   case UNKNOWN:
-    lookup(nextChar);
-      if (nextToken == '\n') 
-      {
-    	getNewLine();
-	printf("Error: Next lexeme not in a valid expression. Moving to next expr. \n\n");
-	return nextToken;
-      }
+    lookup(nextChar); 
     getChar();
-  } break;   
+    break;
+      
   
   printf("Next token is: %d, Next lexeme is %s\n", nextToken, lexeme);
   return nextToken;
