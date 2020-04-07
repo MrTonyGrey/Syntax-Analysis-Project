@@ -94,7 +94,18 @@ void factor()
   }
   printf("Exit <factor>\n");
 }
- 
+
+void term() 
+{
+  printf("Enter <term>\n");
+  factor();  // parse the first factor
+  while (nextToken == MULT_OP || nextToken == DIV_OP) // as long as the next is * or / get the next token and parse the next factor
+  {
+    lex(); // get the next token
+    factor(); // parse the next factor
+  }
+  printf("Exit <term> \n");
+}
 
 int  lookup(char  ch)  /* lookup - a function to lookup operators and parentheses and return the token */
 {  
