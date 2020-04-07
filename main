@@ -107,6 +107,18 @@ void term()
   printf("Exit <term> \n");
 }
 
+void expr() 
+{
+  printf("Enter <expr> \n");
+
+  // parse first term
+  term();
+
+  if(nextToken == IDENT)
+  {
+    error("Unexpected IDENT");
+  }
+
 int  lookup(char  ch)  /* lookup - a function to lookup operators and parentheses and return the token */
 {  
   switch (ch) 
