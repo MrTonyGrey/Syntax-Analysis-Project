@@ -234,11 +234,11 @@ void addChar()
   {
     lexeme[lexLen++] = nextChar;
     lexeme[lexLen] = 0;
-   } 
-   else 
-   {
+  } 
+  else 
+  {
     printf("Error - lexeme is too long \n");
-   }
+  }
 }
 
 void getChar() 
