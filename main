@@ -70,8 +70,16 @@ void factor()
  
   if(nextToken == IDENT || nextToken == INT_LIT)  // Picks a RHSs
   {
-    lex();  // Call lex ()
+    lex();  // Call lex()
   }
+  else  // If the RHS is <expr>,  lex()  passes LEFT_PAREN, calls expr(), then checks for RIGHT_PAREN
+  {
+    if(nextToken == LEFT_PAREN)
+    {
+      lex();
+      expr(); // Call expr()
+      if(nextToken == RIGHT_PAREN)
+      {
  
 
 int  lookup(char  ch)  /* lookup - a function to lookup operators and parentheses and return the token */
