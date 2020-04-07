@@ -5,6 +5,14 @@
 #include <ctype.h>
 #include <stdio.h>
 
+/* The following are variables used throughout the program */
+int charClass;
+int lexLen;
+char nextChar;
+int token;
+int nextToken = -2;
+char lexeme [100];
+
 /* Function declarations */ 
 void  addChar(); 
 void  getChar(); 
@@ -15,6 +23,7 @@ int  lex();
 #define LETTER 0 
 #define DIGIT 1 
 #define UNKNOWN 99
+
 /* Token codes */ 
 #define INT_LIT 10 
 #define IDENT 11 
