@@ -133,8 +133,16 @@ void stmt()
     lex(); // Call lex()
     if (nextToken == ASSIGN_OP)
     {
-    
+      lex();
+      expr();
     }
+    else 
+    {
+      expect_error(ASSIGN_OP); // Call expect_error function
+    }
+  } 
+  printf("Exit <stmt>\n");
+}
 
 int  lookup(char  ch)  /* lookup - a function to lookup operators and parentheses and return the token */
 {  
