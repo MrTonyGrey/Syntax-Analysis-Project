@@ -206,6 +206,19 @@ int  lookup(char  ch)  /* lookup - a function to lookup operators and parenthese
       addChar();      
       nextToken = DIV_OP;      
       break;
+      
+    case '=':
+      addChar();
+      nextToken = ASSIGN_OP;
+      break;
+    
+    case '\n':
+      lexeme[0] = 'E';
+      lexeme[1] = 'O';
+      lexeme[2] = 'F';
+      lexeme[3] = 0;
+      nextToken = EOF;
+      break;
     
     default:      
       addChar();      
