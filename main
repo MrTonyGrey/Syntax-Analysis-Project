@@ -60,9 +60,10 @@ int  lex();
     return -1; 
 }
 
-main() /* main driver */    
+main(int argc, char *argv[]) // main function 
 {
-  if  ((in_fp = fopen("front.in", "r")) == NULL)      /* Open the input data file and process its contents */ 
+  fileSize = fsize(argv[1]); // Get the size of the file
+  if  ((in_fp = fopen(argv[1], "r")) == NULL)      // Open file  
     printf("ERROR - cannot open front.in \n"); 
   else 
   {     
@@ -70,7 +71,7 @@ main() /* main driver */
     do 
     {       
       lex();    
-     } while  (nextToken != EOF);  
+     } while  (getCharCount < fileSize);  
    } 
 }
 
