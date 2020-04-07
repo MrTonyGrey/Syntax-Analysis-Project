@@ -53,6 +53,16 @@ void error(const char * msg)
   exit(0);
 }
  
+/* An expected error function for errors */
+void expect_error(int EXPECTED_CODE)
+{
+  // this handles parsing expect errors
+  //printf("Parsing Error: Expected %d got token %d, lexeme: %s \n", EXPECTED_CODE, nextToken, lexeme);
+  printf("Error");
+  exit(0);
+
+}
+ 
 
 int  lookup(char  ch)  /* lookup - a function to lookup operators and parentheses and return the token */
 {  
