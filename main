@@ -28,6 +28,10 @@ int  lex();
 
 */
 
+// Declarations for functions <expr> and <stmt>
+ void expr();
+ void stmt();
+
 main() /* main driver */    
 {
   if  ((in_fp = fopen("front.in", "r")) == NULL)      /* Open the input data file and process its contents */ 
