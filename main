@@ -80,6 +80,20 @@ void factor()
       expr(); // Call expr()
       if(nextToken == RIGHT_PAREN)
       {
+      lex();
+      }
+      else 
+      {
+        expect_error(RIGHT_PAREN); 
+      }
+    }
+    else 
+    {
+      expect_error(LEFT_PAREN); // value was not a valid expression
+    }
+  }
+  printf("Exit <factor>\n");
+}
  
 
 int  lookup(char  ch)  /* lookup - a function to lookup operators and parentheses and return the token */
