@@ -260,7 +260,7 @@ void getChar()
 
 void getNonBlank() 
 {
-  while (isspace(nextChar)) 
+  while (isspace(nextChar) && nextChar != '\n' ) 
     getChar();
 }
 
