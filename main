@@ -1,4 +1,4 @@
-/* The following are libraries in C for analysis */
+ /* The following are libraries in C for analysis */
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <stdlib.h>
@@ -310,4 +310,3 @@ int lex()
   return nextToken;
 } 
 /* End of function lex */
-    
